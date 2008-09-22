@@ -2,8 +2,6 @@ h1. woulda
 
 Written by "Sean Hussey":mailto:sean@seanhussey.com.
 
-Thanks to Tammer Saleh, Dan Croak, and Jon Yurek of thoughtbot, inc.
-
 Copyright 2008 Sean Hussey.
 
 h2. Download
