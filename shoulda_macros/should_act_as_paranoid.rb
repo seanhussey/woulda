@@ -4,7 +4,8 @@ class Test::Unit::TestCase
 
     context "A #{klass.name}" do
       should "be paranoid (it will not be deleted from the database)" do
-        klass.paranoid?
+        assert klass.paranoid?
+        assert klass.included_modules.include?(Caboose::Acts::Paranoid)
       end
 
       should "not have a value for deleted_at" do
