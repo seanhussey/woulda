@@ -1,10 +1,8 @@
 h1. woulda
 
-Written by "Sean Hussey":mailto:sean@seanhussey.com.
+Testing is love. Especially when done
 
-Copyright 2008 Sean Hussey.
-
-h2. Download
+h2. Installing
 
 Github: "Page":http://github.com/seanhussey/woulda/tree/master "Clone":git://github.com/seanhussey/woulda.git
 
@@ -14,6 +12,11 @@ woulda requires "shoulda":http://github.com/thoughtbot/shoulda/tree/master >= 2.
 
 h2. Included Macros
 
-should_act_as_paranoid
+    should_act_as_paranoid # acts_as_paranoid_
+    should_have_attachment # attachment_fu
+    should_act_as_enumerated # enumeration_mixin
 
-h2. More Information
+
+Written by "Sean Hussey":mailto:sean@seanhussey.com and "Josh Nichols":http://technicalpickles.com
+
+Copyright 2008 Sean Hussey and Josh Nichols.
