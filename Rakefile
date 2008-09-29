@@ -16,8 +16,8 @@ spec = Gem::Specification.new do |s|
   # s.extra_rdoc_files = ["README.rdoc", "CONTRIBUTION_GUIDELINES.rdoc"]
   # s.rdoc_options     = ["--line-numbers", "--inline-source", "--main", "README.rdoc"]
  
-  s.author  = "Sean Hussey"
-  s.email   = "sean@seanhussey.com"
+  s.authors  = ["Sean Hussey", "Josh Nichols"]
+  s.email    = ["sean@seanhussey.com", "josh@technicalpickles.com"]
  
   s.add_dependency "thoughtbot-shoulda", ">= 2.0.0"
 end
