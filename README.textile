@@ -4,7 +4,7 @@ Testing is love. Especially when done with "Shoulda":http://thoughtbot.com/proje
 
 There are tons of Rails plugins and gems out there. It should be easy to test your Rails app that uses these as well. That kind of support doesn't really belong in Shoulda itself though.
 
-That's where Woulda comes in 
+That's where Woulda comes in.
 
 h2. Installing
 
@@ -16,17 +16,37 @@ Use it in a Rails app by placing in config/environments/test.rb:
 
 Woulda requires "shoulda":http://github.com/thoughtbot/shoulda/tree/master >= 2.0.0.
 
+h2. Included Macros
+
+<pre><code># acts_as_ferret
+should_act_as_ferret :title, :contents
+
+# acts_as_list
+should_act_as_list
+
+# acts_as_paranoid
+should_act_as_paranoid
+
+# acts_as_taggable_on_steroids
+should_act_as_taggable_on_steroids
+
+# attachment_fu
+should_have_attachment :content_type => :image
+
+# enumeration_mixin
+should_act_as_enumerated # enumeration_mixin
+
+# paperclip
+should_have_attached_file :avatar
+
+# will_paginate
+should_have_per_page 10</code></pre>
+
 h2. The source
 
 The source is available from "GitHub":http://github.com/seanhussey/woulda/tree/master.
 
 Clone it: <pre>git clone git://github.com/seanhussey/woulda.git</pre>
-
-h2. Included Macros
-
-    should_act_as_paranoid # acts_as_paranoid_
-    should_have_attachment # attachment_fu
-    should_act_as_enumerated # enumeration_mixin
 
 h2. Credit
 
