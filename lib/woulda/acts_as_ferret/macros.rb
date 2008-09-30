@@ -2,6 +2,7 @@ module Woulda
   module ActsAsFerret
     module Macros
       # should_act_as_ferret :any, :fields, :i_may, :have, :specified
+      # Original source: http://www.soyunperdedor.com/node/34
       def should_act_as_ferret(*fields)
         klass = self.name.gsub(/Test$/, '').constantize
 

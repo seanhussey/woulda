@@ -1,14 +1,26 @@
 h1. woulda
 
-Testing is love. Especially when done
+Testing is love. Especially when done with "Shoulda":http://thoughtbot.com/projects/shoulda. Shoulda makes testing your Rails app pretty easy.
+
+There are tons of Rails plugins and gems out there. It should be easy to test your Rails app that uses these as well. That kind of support doesn't really belong in Shoulda itself though.
+
+That's where Woulda comes in 
 
 h2. Installing
 
-Github: "Page":http://github.com/seanhussey/woulda/tree/master "Clone":git://github.com/seanhussey/woulda.git
+It's available as a gem: <pre>gem install seanhussey-woulda --source http://gems.github.com</pre>
 
-Gem: <pre>gem install seanhussey-woulda --source http://gems.github.com</pre>
+Use it in a Rails app by placing in config/environments/test.rb:
 
-woulda requires "shoulda":http://github.com/thoughtbot/shoulda/tree/master >= 2.0.0.
+<pre>config.gem 'seanhussey-woulda', :lib => 'woulda', :source => 'http://gems.github.com'</pre>
+
+Woulda requires "shoulda":http://github.com/thoughtbot/shoulda/tree/master >= 2.0.0.
+
+h2. The source
+
+The source is available from "GitHub":http://github.com/seanhussey/woulda/tree/master.
+
+Clone it: <pre>git clone git://github.com/seanhussey/woulda.git</pre>
 
 h2. Included Macros
 
@@ -16,6 +28,7 @@ h2. Included Macros
     should_have_attachment # attachment_fu
     should_act_as_enumerated # enumeration_mixin
 
+h2. Credit
 
 Written by "Sean Hussey":mailto:sean@seanhussey.com and "Josh Nichols":http://technicalpickles.com
 

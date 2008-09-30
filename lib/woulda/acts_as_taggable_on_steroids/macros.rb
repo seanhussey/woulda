@@ -1,6 +1,7 @@
 module Woulda
   module ActsAsTaggableOnSteroids
     module Macros
+      # Original source: http://www.soyunperdedor.com/node/34
       def should_act_as_taggable_on_steroids
         klass = self.name.gsub(/Test$/, '').constantize
 

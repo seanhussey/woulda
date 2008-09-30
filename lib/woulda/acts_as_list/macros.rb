@@ -1,6 +1,7 @@
 module Woulda
   module ActsAsList
     module Macros
+      # Original source: http://www.soyunperdedor.com/node/34
       def should_act_as_list
         klass = self.name.gsub(/Test$/, '').constantize
 
