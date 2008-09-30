@@ -10,7 +10,7 @@ spec = Gem::Specification.new do |s|
   s.homepage          = "http://github.com/seanhussey/woulda"
   s.rubyforge_project = "woulda"
  
-  s.files       = FileList["[A-Z]*", "{shoulda_macros}/**/*"]
+  s.files       = FileList["[A-Z]*", "{shoulda_macros}/**/*", "lib/**/*"]
  
   # s.has_rdoc         = true
   # s.extra_rdoc_files = ["README.rdoc", "CONTRIBUTION_GUIDELINES.rdoc"]

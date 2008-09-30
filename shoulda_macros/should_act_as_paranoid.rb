@@ -1,1 +1,0 @@
-require 'woulda/acts_as_paranoid' if defined? Caboose::Acts::Paranoid

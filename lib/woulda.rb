@@ -5,3 +5,4 @@ require 'woulda/acts_as_taggable_on_steroids' if defined? ActiveRecord::Acts::Ta
 require 'woulda/attachment_fu' if defined? Technoweenie::AttachmentFu
 require 'woulda/enumerations_mixin' if defined? ActiveRecord::Acts::Enumerated
 require 'woulda/paperclip' if defined? Paperclip
+require 'woulda/will_paginate' if defined? WillPaginate

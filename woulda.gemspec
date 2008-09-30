@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.authors = ["Sean Hussey", "Josh Nichols"]
   s.date = %q{2008-09-29}
   s.email = ["sean@seanhussey.com", "josh@technicalpickles.com"]
-  s.files = ["LICENSE", "Rakefile", "README.textile", "shoulda_macros/should_act_as_paranoid.rb"]
+  s.files = ["LICENSE", "Rakefile", "README.textile", "shoulda_macros/woulda_macros.rb", "lib/woulda", "lib/woulda/acts_as_ferret", "lib/woulda/acts_as_ferret/macros.rb", "lib/woulda/acts_as_ferret.rb", "lib/woulda/acts_as_list", "lib/woulda/acts_as_list/macros.rb", "lib/woulda/acts_as_list.rb", "lib/woulda/acts_as_paranoid", "lib/woulda/acts_as_paranoid/macros.rb", "lib/woulda/acts_as_paranoid.rb", "lib/woulda/acts_as_taggable_on_steroids", "lib/woulda/acts_as_taggable_on_steroids/macros.rb", "lib/woulda/acts_as_taggable_on_steroids.rb", "lib/woulda/attachment_fu", "lib/woulda/attachment_fu/macros.rb", "lib/woulda/attachment_fu.rb", "lib/woulda/enumerations_mixin", "lib/woulda/enumerations_mixin/macros.rb", "lib/woulda/enumerations_mixin.rb", "lib/woulda/paperclip", "lib/woulda/paperclip/macros.rb", "lib/woulda/paperclip.rb", "lib/woulda/will_paginate", "lib/woulda/will_paginate/macros.rb", "lib/woulda/will_paginate.rb", "lib/woulda.rb"]
   s.homepage = %q{http://github.com/seanhussey/woulda}
   s.require_paths = ["lib"]
   s.rubyforge_project = %q{woulda}
