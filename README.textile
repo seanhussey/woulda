@@ -19,28 +19,44 @@ Woulda requires "shoulda":http://github.com/thoughtbot/shoulda/tree/master >= 2.
 h2. Included Macros
 
 <pre><code># acts_as_ferret
-should_act_as_ferret :title, :contents
+class PostTest < Test::Unit::TestCase
+  should_act_as_ferret :title, :contents
+end
 
 # acts_as_list
-should_act_as_list
+class NewsItemTest < Test::Unit::TestCase
+  should_act_as_list
+end
 
 # acts_as_paranoid
-should_act_as_paranoid
+class DocumentTest < Test::Unit::TestCase
+  should_act_as_paranoid
+end
 
 # acts_as_taggable_on_steroids
-should_act_as_taggable_on_steroids
+class PersonTest < Test::Unit::TestCase
+  should_act_as_taggable_on_steroids
 
 # attachment_fu
-should_have_attachment :content_type => :image
+class ImageTest < Test::Unit::TestCase
+  should_have_attachment :content_type => :image
+end
 
 # enumeration_mixin
-should_act_as_enumerated # enumeration_mixin
+class RoleTest < Test::Unit::
+  should_act_as_enumerated
+end
+  
 
 # paperclip
-should_have_attached_file :avatar
+class UserTest < Test::Unit::TestCase
+  should_have_attached_file :avatar
+end
 
 # will_paginate
-should_have_per_page 10</code></pre>
+class PostTest < Test::Unit::TestCase
+  should_have_per_page 10
+end</code></pre>
 
 h2. The source
 
