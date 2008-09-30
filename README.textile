@@ -2,7 +2,7 @@ h1. woulda
 
 Testing is love. Especially when done with "Shoulda":http://thoughtbot.com/projects/shoulda. Shoulda makes testing your Rails app pretty easy.
 
-There are tons of Rails plugins and gems out there. It should be easy to test your Rails app that uses these as well. That kind of support doesn't really belong in Shoulda itself though.
+There are tons of Rails plugins and gems out there. It should be easy to test your Rails app that uses these as well. That kind of support doesn't really belong in Shoulda itself, though.
 
 That's where Woulda comes in.
 
@@ -46,7 +46,6 @@ end
 class RoleTest < Test::Unit::
   should_act_as_enumerated
 end
-  
 
 # paperclip
 class UserTest < Test::Unit::TestCase
@@ -56,6 +55,11 @@ end
 # will_paginate
 class PostTest < Test::Unit::TestCase
   should_have_per_page 10
+end
+
+# acts_as_solr
+class ProductTest < Test::Unit::TestCase
+  should_act_as_solr :name, :price
 end</code></pre>
 
 h2. The source

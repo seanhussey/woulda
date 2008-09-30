@@ -6,3 +6,4 @@ require 'woulda/attachment_fu' if defined? Technoweenie::AttachmentFu
 require 'woulda/enumerations_mixin' if defined? ActiveRecord::Acts::Enumerated
 require 'woulda/paperclip' if defined? Paperclip
 require 'woulda/will_paginate' if defined? WillPaginate
+require 'woulda/acts_as_solr' if defined? ActsAsSolr
