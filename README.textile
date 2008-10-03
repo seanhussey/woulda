@@ -44,7 +44,7 @@ class ImageTest < Test::Unit::TestCase
 end
 
 # enumeration_mixin
-class RoleTest < Test::Unit::
+class RoleTest < Test::Unit::TestCase
   should_act_as_enumerated
 end
 
@@ -61,6 +61,11 @@ end
 # acts_as_solr
 class ProductTest < Test::Unit::TestCase
   should_act_as_solr :name, :price
+end
+
+# acts_as_state_machine
+class OrderTest < Test::Unit::TestCase
+  should_act_as_state_machine :intial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from :open}}
 end</code></pre>
 
 h2. The source

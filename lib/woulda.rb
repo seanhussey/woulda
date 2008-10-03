@@ -7,3 +7,4 @@ require 'woulda/enumerations_mixin' if defined? ActiveRecord::Acts::Enumerated
 require 'woulda/paperclip' if defined? Paperclip
 require 'woulda/will_paginate' if defined? WillPaginate
 require 'woulda/acts_as_solr' if defined? ActsAsSolr
+require 'woulda/acts_as_state_machine' if defined? ScottBarron::Acts::StateMachine
