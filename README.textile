@@ -65,7 +65,7 @@ end
 
 # acts_as_state_machine
 class OrderTest < Test::Unit::TestCase
-  should_act_as_state_machine :intial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from :open}}
+  should_act_as_state_machine :initial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from :open}}
 end</code></pre>
 
 h2. The source

@@ -19,13 +19,13 @@ module Woulda
       #   # check the inital state
       #   should_act_as_state_machine :initial => :open
       #
-      #   # check states in addition to :intial
-      #   should_act_as_state_machine :intial => :open, :states => [:closed]
+      #   # check states in addition to :initial
+      #   should_act_as_state_machine :initial => :open, :states => [:closed]
       #
       #   # check events and transitions
       #   should_act_as_state_machine :events => {:close_order => {:to => :closed, :from :open}}
       #
-      #   should_act_as_state_machine :intial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from :open}}
+      #   should_act_as_state_machine :initial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from :open}}
       # end
       #
       def should_act_as_state_machine(opts={})
