@@ -1,5 +1,5 @@
 module Woulda
-  module ActsAsParanoid
+  module ActsAsSolr
     module Macros
       def self.should_act_as_solr(*included_associations)
         klass = model_class
