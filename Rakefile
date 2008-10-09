@@ -5,7 +5,7 @@ require 'rake/gempackagetask'
 
 spec = Gem::Specification.new do |s|
   s.name              = "woulda"
-  s.version           = "0.1.3"
+  s.version           = "0.1.4"
   s.summary           = "woulda is a home for shoulda macros that don't belong in the main shoulda library"
   s.homepage          = "http://github.com/seanhussey/woulda"
   s.rubyforge_project = "woulda"
