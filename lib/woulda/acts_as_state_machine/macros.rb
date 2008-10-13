@@ -69,12 +69,14 @@ module Woulda
               assert klass.transition_table.has_key?(event), "#{klass} does not define event #{event}"
             end
 
-            to = transition[:to]
-            from = transition[:from]
+            to   = transition[:to]
+            from = transition[:from].is_a?(Array) ? transition[:from] : transition[:from].to_a
 
-            should "transition to #{to} from #{from} on event #{event}" do
-              assert_not_nil klass.transition_table[event].detect { |t| t.to == to && t.from == from }, "#{event} does not transition to #{to} from #{from}"
-            end            
+            from.each do |from_state|
+              should "transition to #{to} from #{from_state} on event #{event}" do
+                assert_not_nil klass.transition_table[event].detect { |t| t.to == to && t.from == from_state }, "#{event} does not transition to #{to} from #{from_state}"
+              end
+            end
 
           end
         end   
