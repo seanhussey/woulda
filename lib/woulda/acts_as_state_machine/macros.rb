@@ -70,7 +70,7 @@ module Woulda
             end
 
             to   = transition[:to]
-            from = transition[:from].is_a?(Array) ? transition[:from] : transition[:from].to_a
+            from = transition[:from].is_a?(Symbol) ? [transition[:from]] : transition[:from]
 
             from.each do |from_state|
               should "transition to #{to} from #{from_state} on event #{event}" do
