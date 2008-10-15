@@ -14,7 +14,7 @@ module Woulda
         should "have a paperclip attachment named ##{attachment}" do
           assert klass.new.respond_to?(attachment.to_sym),
                  "@#{klass.name.underscore} doesn't have a paperclip field named #{attachment}"
-          assert_equal Paperclip::Attachment, klass.new.send(attachment.to_sym).class
+          assert_equal ::Paperclip::Attachment, klass.new.send(attachment.to_sym).class
         end
       end
     end
