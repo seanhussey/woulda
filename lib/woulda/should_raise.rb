@@ -1,6 +1,6 @@
 require 'shoulda'
-require 'woulda/should_raise/macros'
+require File.dirname(__FILE__) + '/should_raise/macros'
 
 Test::Unit::TestCase.class_eval do
-  extend Woulda::WillPaginate::Macros
+  extend Woulda::ShouldRaise::Macros
 end

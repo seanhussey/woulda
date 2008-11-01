@@ -1,5 +1,5 @@
 require 'shoulda'
-require 'woulda/acts_as_list/macros'
+require File.dirname(__FILE__) + '/acts_as_list/macros'
 
 Test::Unit::TestCase.class_eval do
   extend Woulda::ActsAsList::Macros

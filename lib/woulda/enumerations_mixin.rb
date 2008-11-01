@@ -1,5 +1,5 @@
 require 'shoulda'
-require 'woulda/enumerations_mixin/macros'
+require File.dirname(__FILE__) + '/enumerations_mixin/macros'
 
 Test::Unit::TestCase.class_eval do
   extend Woulda::EnumerationsMixin::Macros
