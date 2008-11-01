@@ -56,37 +56,24 @@ module Woulda
         raise ArgumentError, "Unknown parameter(s): #{opts.keys.inspect}. Only :message, :instance_of and :kind_of are supported." if opts.size > 0
 
         context "block #{block.inspect}" do # To avoid dupe test names. Any other ideas?
-          if type
-
-            should("raise an exception %s type #{type.inspect}" % (exact ? 'of' : 'descending from')) do
-              begin
-                yield
-              rescue Exception => ex
-                @raised_exception = ex
-              end
-              if @raised_exception
-                if exact
-                  assert_instance_of type, @raised_exception
-                else
-                  assert_kind_of type, @raised_exception
-                end
+          should_string  = "raise an exception"
+          should_string += " %s type #{type.inspect}" % (exact ? 'of' : 'descending from') if type
+          
+          should should_string do
+            begin
+              yield
+            rescue Exception => ex
+              @raised_exception = ex
+            end
+            if @raised_exception && type
+              if exact
+                assert_instance_of type, @raised_exception
               else
-                assert @raised_exception, "The block was expected to raise an exception, but didn't"
+                assert_kind_of type, @raised_exception
               end
+            else
+              assert @raised_exception, "The block was expected to raise an exception, but didn't"
             end
-
-          else
-
-            should "raise an exception" do
-              has_raised = false
-              begin
-                yield
-              rescue Exception => ex
-                has_raised = true
-              end
-              assert has_raised, "The block was expected to raise an exception, but didn't"
-            end
-
           end
         end
 
