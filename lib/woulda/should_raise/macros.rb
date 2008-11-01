@@ -19,6 +19,10 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 # WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+# TODO
+# - nest contexts/should differently so the message verifications don't clobber each other.
+#   Put exactly same message in last few tests for an example.
+
 module Woulda
   module ShouldRaise
     module Macros

@@ -1,5 +1,9 @@
 require File.dirname(__FILE__) + '/../test_helper'
 
+# TODO
+# - Add tests that verify correct behavior when nothing is raised
+# - Add tests for Ruby 1.9?
+
 class ShouldRaiseTest < Test::Unit::TestCase
   # All of the basic Ruby 1.8 exceptions, except for 'fatal'
   EXCEPTIONS = [
