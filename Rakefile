@@ -33,3 +33,11 @@ task :gemspec do
     f.write spec.to_ruby
   end
 end
+
+desc "Run all tests"
+Rake::TestTask.new(:test) do |t|
+  t.pattern = 'test/**/*_test.rb'
+  t.verbose = true
+end
+
+task :default => :test
