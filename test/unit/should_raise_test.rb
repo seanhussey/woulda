@@ -60,6 +60,7 @@ class ShouldRaiseTest < Test::Unit::TestCase
   end
   
   context "Using an unknown param_type" do
+    # Testing should_raise with should_raise. Awesome.
     should_raise(ArgumentError, :message => /:unknown_param_type/) do
       should_raise(:unknown_param_type => 'foo') {}
     end
@@ -84,6 +85,10 @@ class ShouldRaiseTest < Test::Unit::TestCase
     require "more vespene gas"
   end
   # 1 assertion, slightly less strict than with :instance_of (note: LoadError < ScriptError)
+  
+  should_raise(:kind_of => LoadError) do
+    require "more vespene gas"
+  end
   
   should_raise(:message => "no such file to load") do
     require "more vespene gas"
