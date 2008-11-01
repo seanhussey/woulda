@@ -58,7 +58,7 @@ module Woulda
         context "block #{block.inspect}" do # To avoid dupe test names. Any other ideas?
           if type
 
-            should "raise an exception of type #{type.inspect}" do
+            should("raise an exception %s type #{type.inspect}" % (exact ? 'of' : 'descending from')) do
               begin
                 yield
               rescue Exception => ex
