@@ -64,10 +64,14 @@ module Woulda
               rescue Exception => ex
                 @raised_exception = ex
               end
-              if exact
-                assert_instance_of type, @raised_exception
+              if @raised_exception
+                if exact
+                  assert_instance_of type, @raised_exception
+                else
+                  assert_kind_of type, @raised_exception
+                end
               else
-                assert_kind_of type, @raised_exception
+                assert @raised_exception, "The block was expected to raise an exception, but didn't"
               end
             end
 
