@@ -34,7 +34,7 @@ module Woulda
         [:message, :instance_of, :kind_of].each { |acceptable_arg| opts.delete(acceptable_arg) }
         raise ArgumentError, "Unknown parameter(s): #{opts.keys.inspect}. Only :message, :instance_of and :kind_of are supported." if opts.size > 0
 
-        context "block #{block.inspect}" do # To avoid dupes
+        context "block #{block.inspect}" do # To avoid dupe test names. Any other ideas?
           if type
 
             should "raise an exception of type #{type.inspect}" do
