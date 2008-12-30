@@ -63,6 +63,11 @@ class ProductTest < Test::Unit::TestCase
   should_act_as_solr :name, :price
 end
 
+# acts_as_xapian
+class ProductTest < Test::Unit::TestCase
+  should_act_as_xapian :name, :description
+end 
+
 # acts_as_state_machine
 class OrderTest < Test::Unit::TestCase
   should_act_as_state_machine :initial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from :open}}
