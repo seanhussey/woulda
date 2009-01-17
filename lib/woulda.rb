@@ -1,5 +1,9 @@
 woulda_dir = File.expand_path(File.dirname(__FILE__)) + '/woulda'
+
+# Standalone Macros
 require "#{woulda_dir}/should_raise"
+
+# Macros for gems and plugins
 require "#{woulda_dir}/acts_as_ferret" if defined? ActsAsFerret
 require "#{woulda_dir}/acts_as_list" if defined? ActiveRecord::Acts::List
 require "#{woulda_dir}/acts_as_paranoid" if defined? Caboose::Acts::Paranoid
