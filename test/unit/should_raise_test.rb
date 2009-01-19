@@ -76,9 +76,19 @@ class ShouldRaiseTest < Test::Unit::TestCase
   end
   
   context "Using an unknown param_type" do
-    # Testing should_raise with should_raise. Awesome.
-    should_raise(ArgumentError, :message => /:unknown_param_type/) do
+    begin
       should_raise(:unknown_param_type => 'foo') {}
+    rescue ArgumentError => ex
+      #All of this is happening at class definition time
+      @@invalid_should_raise_param_exception = ex
+    end
+
+    should "raise an ArgumentError" do
+      assert_kind_of ArgumentError, @@invalid_should_raise_param_exception
+    end
+
+    should "give a message that includes the invalid param name" do
+      assert_match /:unknown_param_type/, @@invalid_should_raise_param_exception.message
     end
   end
   
