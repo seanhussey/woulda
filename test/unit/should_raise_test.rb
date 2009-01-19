@@ -43,6 +43,18 @@ class ShouldRaiseTest < Test::Unit::TestCase
   
   PLAIN_EXCEPTIONS = EXCEPTIONS - EXCEPTIONS_WITH_PARAMS.keys
 
+  context "Defining an instance variable in the context setup block" do
+    setup do
+      @my_instance_variable = 'my instance_variable'
+    end
+
+    should_raise(ArgumentError, :message => 'dummy') do
+      #If we don't have access to the variable here, another exception's gonna be raised
+      @my_instance_variable.upcase! 
+      raise ArgumentError, 'dummy'
+    end
+  end
+
   context "Raising all the types of exceptions" do
     PLAIN_EXCEPTIONS.each do |x|
       context "for exception #{x.inspect}, with a straight exception class argument" do

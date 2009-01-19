@@ -65,7 +65,7 @@ module Woulda
           
           should should_string do
             begin
-              yield
+              instance_eval &block
             rescue Exception => ex
               @raised_exception = ex
             end
@@ -85,7 +85,7 @@ module Woulda
           context "raising an exception" do
             setup do
               begin
-                yield
+                instance_eval &block
               rescue Exception => ex
                 @raised_exception = ex
               end
