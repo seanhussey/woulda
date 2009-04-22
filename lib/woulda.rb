@@ -1,6 +1,7 @@
 woulda_dir = File.expand_path(File.dirname(__FILE__)) + '/woulda'
 
 # Standalone Macros
+require "#{woulda_dir}/lazy_http"
 require "#{woulda_dir}/should_raise"
 
 # Macros for gems and plugins

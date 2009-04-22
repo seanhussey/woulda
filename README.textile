@@ -48,6 +48,11 @@ class RoleTest < Test::Unit::TestCase
   should_act_as_enumerated
 end
 
+# lazy_http
+class PageControllerTest < ActionController::TestCase
+  lazy_get :index, :about_us, :contact
+end
+
 # paperclip
 class UserTest < Test::Unit::TestCase
   should_have_attached_file :avatar
