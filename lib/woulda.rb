@@ -16,3 +16,4 @@ require "#{woulda_dir}/will_paginate" if defined? WillPaginate
 require "#{woulda_dir}/acts_as_solr" if defined? ActsAsSolr
 require "#{woulda_dir}/acts_as_state_machine" if defined? ScottBarron::Acts::StateMachine
 require "#{woulda_dir}/acts_as_xapian" if defined? ActsAsXapian
+require "#{woulda_dir}/acts_as_versioned" if defined? ActiveRecord::Acts::Versioned
