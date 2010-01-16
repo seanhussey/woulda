@@ -2,7 +2,7 @@ module Woulda
   module EnumerationsMixin
     module Macros
       def should_act_as_enumerated(options = {})
-        klass = model_class
+        klass = described_type
 
         should_have_db_columns :name
 

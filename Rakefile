@@ -11,7 +11,7 @@ begin
     s.homepage = "http://github.com/seanhussey/woulda"
     s.description = "TODO"
     s.authors = ["Sean Hussey", "Josh Nichols"]
-    s.add_dependency "thoughtbot-shoulda", ">= 2.0.0"
+    s.add_dependency "thoughtbot-shoulda", ">= 2.10.2"
     s.rubyforge_project = "woulda"
     s.files       = FileList["[A-Z]*", "{shoulda_macros}/**/*", "lib/**/*"]
   end

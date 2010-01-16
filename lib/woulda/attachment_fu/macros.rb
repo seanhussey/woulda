@@ -2,7 +2,7 @@ module Woulda
   module AttachmentFu
     module Macros
       def should_have_attachment(options = {})
-        klass = model_class
+        klass = described_type
 
         should_have_db_columns :size, :content_type, :filename
         if options[:content_type] == :image

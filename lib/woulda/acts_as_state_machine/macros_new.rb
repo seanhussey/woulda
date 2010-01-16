@@ -29,7 +29,7 @@ module Woulda
       # end
       #
       def should_act_as_state_machine(opts={})
-        klass = model_class
+        klass = described_type
 
         initial_state, states, events, db_column = get_options!([opts], :initial, :states, :events, :column)
 
