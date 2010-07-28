@@ -23,9 +23,9 @@ module Woulda
       #   should_act_as_state_machine :initial => :open, :states => [:closed]
       #
       #   # check events and transitions
-      #   should_act_as_state_machine :events => {:close_order => {:to => :closed, :from :open}}
+      #   should_act_as_state_machine :events => {:close_order => {:to => :closed, :from => :open}}
       #
-      #   should_act_as_state_machine :initial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from :open}}
+      #   should_act_as_state_machine :initial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from => :open}}
       # end
       #
       def should_act_as_state_machine(opts={})

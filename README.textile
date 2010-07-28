@@ -75,7 +75,7 @@ end
 
 # acts_as_state_machine
 class OrderTest < Test::Unit::TestCase
-  should_act_as_state_machine :initial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from :open}}
+  should_act_as_state_machine :initial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from => :open}}
 end
 
 # acts_as_versioned
