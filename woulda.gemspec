@@ -46,6 +46,8 @@ Gem::Specification.new do |s|
     "lib/woulda/should_raise/macros.rb",
     "lib/woulda/will_paginate.rb",
     "lib/woulda/will_paginate/macros.rb",
+    "lib/woulda/woulda_workflow.rb",
+    "lib/woulda/workflow/macros.rb",
     "shoulda_macros/woulda_macros.rb"
   ]
   s.has_rdoc = true

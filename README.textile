@@ -82,6 +82,11 @@ end
 class ProductTest < Test::Unit::TestCase
   should_act_as_versioned
 end
+
+# workflow
+class OrderTest < Test::Unit::TestCase
+  should_have_workflow :initial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from => :open}}
+end
 </code></pre>
 
 h2. The source
