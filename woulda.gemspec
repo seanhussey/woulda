@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Sean Hussey", "Josh Nichols"]
   s.date = %q{2010-11-19}
-  s.description = %q{TODO}
+  s.description = %q{woulda is a home for shoulda macros that don't belong in the main shoulda library}
   s.email = ["sean@seanhussey.com", "josh@technicalpickles.com"]
   s.extra_rdoc_files = [
     "LICENSE",
