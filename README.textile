@@ -48,6 +48,11 @@ class RoleTest < Test::Unit::TestCase
   should_act_as_enumerated
 end
 
+# lazy_http
+class PageControllerTest < ActionController::TestCase
+  lazy_get :index, :about_us, :contact
+end
+
 # paperclip
 class UserTest < Test::Unit::TestCase
   should_have_attached_file :avatar
@@ -70,8 +75,19 @@ end
 
 # acts_as_state_machine
 class OrderTest < Test::Unit::TestCase
-  should_act_as_state_machine :initial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from :open}}
-end</code></pre>
+  should_act_as_state_machine :initial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from => :open}}
+end
+
+# acts_as_versioned
+class ProductTest < Test::Unit::TestCase
+  should_act_as_versioned
+end
+
+# workflow
+class OrderTest < Test::Unit::TestCase
+  should_have_workflow :initial => :open, :states => [:closed], :events => {:close_order => {:to => :closed, :from => :open}}
+end
+</code></pre>
 
 h2. The source
 

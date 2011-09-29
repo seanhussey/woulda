@@ -56,6 +56,23 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.6.2}
   s.summary = %q{woulda is a home for shoulda macros that don't belong in the main shoulda library}
+  s.test_files = [
+    "test/rails_root/app/controllers/application.rb",
+    "test/rails_root/app/helpers/application_helper.rb",
+    "test/rails_root/config/boot.rb",
+    "test/rails_root/config/environment.rb",
+    "test/rails_root/config/environments/development.rb",
+    "test/rails_root/config/environments/production.rb",
+    "test/rails_root/config/environments/test.rb",
+    "test/rails_root/config/initializers/inflections.rb",
+    "test/rails_root/config/initializers/mime_types.rb",
+    "test/rails_root/config/initializers/new_rails_defaults.rb",
+    "test/rails_root/config/routes.rb",
+    "test/rails_root/public/dispatch.rb",
+    "test/rails_root/test/test_helper.rb",
+    "test/test_helper.rb",
+    "test/unit/should_raise_test.rb"
+  ]
 
   if s.respond_to? :specification_version then
     s.specification_version = 3

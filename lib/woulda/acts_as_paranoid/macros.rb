@@ -2,7 +2,7 @@ module Woulda
   module ActsAsParanoid
     module Macros
       def should_act_as_paranoid
-        klass = self.name.gsub(/Test$/, '').constantize
+        klass = described_type
         should_have_db_column :deleted_at
 
         context "A #{klass.name}" do

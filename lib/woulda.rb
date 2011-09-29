@@ -1,6 +1,7 @@
 woulda_dir = File.expand_path(File.dirname(__FILE__)) + '/woulda'
 
 # Standalone Macros
+require "#{woulda_dir}/lazy_http"
 require "#{woulda_dir}/should_raise"
 
 # Macros for gems and plugins
@@ -15,3 +16,5 @@ require "#{woulda_dir}/will_paginate" if defined? WillPaginate
 require "#{woulda_dir}/acts_as_solr" if defined? ActsAsSolr
 require "#{woulda_dir}/acts_as_state_machine" if defined? ScottBarron::Acts::StateMachine
 require "#{woulda_dir}/acts_as_xapian" if defined? ActsAsXapian
+require "#{woulda_dir}/acts_as_versioned" if defined? ActiveRecord::Acts::Versioned
+require "#{woulda_dir}/woulda_workflow" if defined? Workflow
