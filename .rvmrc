@@ -1,0 +1,6 @@
+if [[ -d "${rvm_path:-$HOME/.rvm}/environments" \
+  && -s "${rvm_path:-$HOME/.rvm}/environments/ree@woulda" ]] ; then
+  \. "${rvm_path:-$HOME/.rvm}/environments/ree@woulda"
+else
+  rvm --create use  "ree@woulda"
+fi
