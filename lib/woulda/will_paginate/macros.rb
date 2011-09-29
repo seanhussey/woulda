@@ -2,7 +2,7 @@ module Woulda
   module WillPaginate
     module Macros
       def should_have_per_page(count)
-        klass = self.name.gsub(/Test$/, '').constantize
+        klass = described_type
         context "#{klass}" do
           should "respond to per_page" do
             assert klass.respond_to?(:per_page), "#{klass} does not respond to :per_page"

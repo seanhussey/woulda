@@ -3,7 +3,7 @@ module Woulda
     module Macros
       # Original source: http://giantrobots.thoughtbot.com/2008/6/3/testing-paperclip-with-shoulda
       def should_have_attached_file(attachment)
-        klass = self.name.gsub(/Test$/, '').constantize
+        klass = described_type
 
         context "To support a paperclip attachment named #{attachment}, #{klass}" do
           should_have_db_column("#{attachment}_file_name", :type => :string)

@@ -3,7 +3,7 @@ module Woulda
     module Macros
       # Original source: http://www.soyunperdedor.com/node/34
       def should_act_as_list
-        klass = self.name.gsub(/Test$/, '').constantize
+        klass = described_type
 
         context "To support acts_as_list" do
           should_have_db_column('position', :type => :integer)

@@ -4,7 +4,7 @@ module Woulda
       # should_act_as_ferret :any, :fields, :i_may, :have, :specified
       # Original source: http://www.soyunperdedor.com/node/34
       def should_act_as_ferret(*fields)
-        klass = self.name.gsub(/Test$/, '').constantize
+        klass = described_type
 
         should "include ActsAsFerret methods" do
           assert klass.extended_by.include?(ActsAsFerret::ClassMethods)

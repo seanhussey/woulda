@@ -3,7 +3,7 @@ module Woulda
     module Macros
       # Original source: http://www.soyunperdedor.com/node/34
       def should_act_as_taggable_on_steroids
-        klass = self.name.gsub(/Test$/, '').constantize
+        klass = described_type
 
         should "include ActsAsTaggableOnSteroids methods" do
           assert klass.extended_by.include?(ActiveRecord::Acts::Taggable::ClassMethods)
