@@ -6,7 +6,7 @@ module Woulda
       # should_act_as_xapian :name, :description
       #
       def should_act_as_xapian(*fields)
-        klass = model_class
+        klass = self.name.gsub(/Test$/, '').constantize
 
         context "A #{klass}" do
           should "include ActsAsXapian methods" do

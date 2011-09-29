@@ -2,7 +2,7 @@ module Woulda
   module EnumerationsMixin
     module Macros
       def should_act_as_enumerated(options = {})
-        klass = model_class
+        klass = self.name.gsub(/Test$/, '').constantize
 
         should_have_db_columns :name
 

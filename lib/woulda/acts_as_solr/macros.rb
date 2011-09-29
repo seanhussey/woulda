@@ -2,7 +2,7 @@ module Woulda
   module ActsAsSolr
     module Macros
       def should_act_as_solr(opts={})
-        klass = model_class
+        klass = self.name.gsub(/Test$/, '').constantize
         
         associations = get_options!([opts], :associations)
 
